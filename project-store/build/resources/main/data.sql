@@ -1,0 +1,125 @@
+--- Categories Data
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (1, '2024-09-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ADMIN1', 'Implementos de combate.....', 'Combat Sports', 'Seller 1');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (2, '2024-08-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ADMIN2', 'Implementos de Deportes.....', 'Extreme Sports', 'Seller 2');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (3, '2024-09-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ADMIN1', 'Implementos de Carrera de vehiculos.....', 'Motor Sports', 'Seller 3');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (4, '2024-09-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ADMIN2', 'Adornos, Pinturas y Decoraciones.....', 'Arts & Entertainment', 'Seller 2');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (5, '2024-07-01 15:38:57.000000', '2024-09-10 15:38:57.000000', 'ADMIN1', 'Libros Para practicat literatura.....', 'Books & Literature', 'Seller 2');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (6, '2024-09-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ADMIN2', 'Materiales de Trabajo para oficina y Plantas industriales.....', 'Business & Industrial', 'Seller 1');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (7, '2024-04-01 15:38:57.000000', '2024-09-10 15:38:57.000000', 'ADMIN1', 'Equipos de computacion portatiles y de casa.....', 'Computers', 'Seller 1');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (8, '2024-09-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ADMIN2', 'Equipos Electronicos para hogar.....', 'Consumer Electronics', 'Seller 3');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (9, '2024-09-01 15:38:57.000000', '2024-09-10 15:38:57.000000', 'ADMIN1', 'Alimentos nutritivos del dia, bebidas sin alcohol.....', 'Food & Drink', 'Seller 1');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (10, '2024-03-01 15:38:57.000000', '2024-09-11 15:38:57.000000', 'ADMIN2', 'Juegos para playstations y computadoras.....', 'Games', 'Seller 3');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (11, '2024-09-01 15:38:57.000000', '2024-09-11 15:38:57.000000', 'ADMIN1', 'Regalos para ocaciones especiales.....', 'Gifts', 'Seller 1');
+INSERT IGNORE INTO categories (id, created_at, updated_at, created_by, description, name, updated_by)  VALUES (12, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ADMIN1', 'Implementos basicos para higiene.....', 'Health', 'Seller 1');
+
+---- Products Data
+INSERT IGNORE INTO products (active, category_id, id, price, stock, created_at, updated_at, created_by, description, name, updated_by) VALUES(true, 7, 1, 400, 20, '2024-05-01 15:38:57.000000', '2024-05-01 15:38:57.000000', 'Admin 01', 'teclados gamers', 'teclado inalambrico', 'Admin 02');
+INSERT IGNORE INTO products (active, category_id, id, price, stock, created_at, updated_at, created_by, description, name, updated_by) VALUES(true, 3, 2, 240.0, 3, '2023-08-01 15:38:57.000000', '2024-09-01 15:38:57.000000', 'Admin 02', 'Protector de frio', 'Guantes de moto', 'User 5');
+INSERT IGNORE INTO products (active, category_id, id, price, stock, created_at, updated_at, created_by, description, name, updated_by) VALUES(true, 7, 1, 410, 20, '2024-05-01 15:38:57.000000', '2024-05-01 15:38:57.000000', 'Admin 03', 'Audifonos gamers', 'Audifonos Lenovo', 'Admin 02');
+INSERT IGNORE INTO products (active, category_id, id, price, stock, created_at, updated_at, created_by, description, name, updated_by) VALUES(true, 3, 2, 100.0, 2, '2023-08-01 15:38:57.000000', '2024-09-01 15:38:57.000000', 'Admin 02', 'Herramientas auxiliares para mantenimiento de auto', 'Herramientas mecanicas', 'User 5');
+INSERT IGNORE INTO products (active, category_id, id, price, stock, created_at, updated_at, created_by, description, name, updated_by) VALUES(true, 7, 1, 40, 20, '2024-05-01 15:38:57.000000', '2024-05-01 15:38:57.000000', 'Admin 03', 'Monitor curvo LG', 'Monitor Gamer', 'Admin 02');
+INSERT IGNORE INTO products (active, category_id, id, price, stock, created_at, updated_at, created_by, description, name, updated_by) VALUES(true, 3, 2, 290.0, 9, '2023-08-01 15:38:57.000000', '2024-09-01 15:38:57.000000', 'Admin 02', 'Protector de frio', 'Guantes de moto', 'User 5');
+
+----- Stores Data
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ShopSavvy', '09:00 am to 20:00 pm', 'Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'TrendyTrinkets', '09:00 am to 20:00 pm', 'Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 3');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'EcoFusion Finds', '09:00 am to 20:00 pm', 'Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 2');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'StyleSplash', '09:00 am to 20:00 pm', 'Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 1');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'GourmetGlow', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 5');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ChicVoyage', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 2');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'Wanderlust Emporium', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 2');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'JewelJunction', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 1');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'HarmonyHaven', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 1');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'UrbanPulse', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 1');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ElegantEdge', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 2');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'CraftedCurios', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 3');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'LuxeLane', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'Bohemian Bliss Boutique', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'WhimsyWave', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'Gemstone Galore', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'RusticVogue', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'TreasuresTraverse', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'ChicPetal', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+INSERT IGNORE INTO store_db.store  (id, created_at, updated_at, name, opening_hours, address, city, created_by, updated_by) VALUES (0, '2024-05-01 15:38:57.000000', '2024-09-15 15:38:57.000000', 'CoastalGems', '09:00 am to 20:00 pm','Calle 5 nr 20', 'La Paz', 'Admin 1', 'Operator 4');
+
+
+-----Orders Data
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES (true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order2', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order3', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order4', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order5', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order6', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order7', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order8', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order9', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order10', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order11', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order12', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order13', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order14', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order15', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order16', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order17', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order18', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order19', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order2', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+INSERT IGNORE INTO store_db.orders (is_delivery, stored_id, created_at, date, updated_at, created_by, name, shipping_address, updated_by) VALUES ( true, 1, '2024-05-01 15:38:57.000000', CURRENT_DATE(), '2024-05-01 15:38:57.000000','Admin2', 'Order1', 'El Alto','BigBoos');
+
+
+------Details Order Data
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 1, 2, 0);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 2, 2, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 3, 2, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 4, 2, 2);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 5, 2, 4);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 6, 2, 5);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 7, 2, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 8, 2, 8);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 9, 2, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 10, 2, 2);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 11, 2, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 12, 2, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 13, 1, 8);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 14, 1, 9);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 15, 1, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 16, 1, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 17, 1, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 18, 1, 9);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 19, 1, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 20, 1, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 21, 1, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 22, 1, 4);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 23, 1, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 24, 1, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 25, 1, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 26, 1, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 27, 2, 0);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 28, 2, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 29, 2, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 30, 2, 2);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 31, 2, 4);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 32, 2, 5);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 33, 2, 3);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 34, 2, 8);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 35, 2, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 36, 2, 2);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 37, 2, 1);
+INSERT IGNORE INTO details_orders( order_id, product_id, quantity) VALUES ( 38, 2, 3);
