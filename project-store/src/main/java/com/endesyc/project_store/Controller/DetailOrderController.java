@@ -19,13 +19,11 @@ public class DetailOrderController {
 
     @GetMapping("/{id}")
     public ResponseEntity<DetailOrder> getById(@PathVariable("id") Integer id){
-        DetailOrder detailFound=detailOrderService.getById(id);
-        return ResponseEntity.ok().body(detailFound);
+        return ResponseEntity.ok().body(detailOrderService.getById(id));
     }
     @PostMapping
     public ResponseEntity <DetailOrder> create(@RequestBody DetailOrderDto dto){
-        DetailOrder detailSaved=detailOrderService.create(dto);
-        return ResponseEntity.status(HttpStatus.OK).body(detailSaved);
+        return ResponseEntity.status(HttpStatus.OK).body(detailOrderService.create(dto));
     }
 
 
@@ -39,16 +37,12 @@ public class DetailOrderController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity <DetailOrder> updateDetail(@PathVariable("id") Integer id,@RequestBody DetailOrderDto dto){
-        DetailOrder detailFound=detailOrderService.getById(id);
-        DetailOrder detailUpdated=detailOrderService.updateDetail(detailFound.getId(),dto);
-        return ResponseEntity.status(HttpStatus.OK).body(detailUpdated);
+        return ResponseEntity.status(HttpStatus.OK).body(detailOrderService.updateDetail(id,dto));
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteDetail(@PathVariable("id") Integer id){
         detailOrderService.deleteDetail(id);
         return ResponseEntity.ok().body("Detail Order is deleted successfully");
     }
-
-
 
 }

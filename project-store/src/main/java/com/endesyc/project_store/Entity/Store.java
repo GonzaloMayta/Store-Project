@@ -1,6 +1,7 @@
 package com.endesyc.project_store.Entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +10,7 @@ import lombok.Setter;
 
 
 import java.sql.Timestamp;
+import java.util.List;
 
 
 @AllArgsConstructor
@@ -27,15 +29,21 @@ public class Store {
     private String address;
     @Column(length = 150)
     private String city;
-    @Column(length = 50)
-    private String opening_hours;
+    @Column(name = "opening_hours", length = 50)
+    private String openingHours;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", shape = JsonFormat.Shape.STRING)
-    private Timestamp created_at;
+    @Column(name="created_at")
+    private Timestamp createdAt;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", shape = JsonFormat.Shape.STRING)
-    private Timestamp updated_at;
-    @Column(length = 255)
-    private String created_by;
-    @Column(length = 255)
-    private String updated_by;
+    @Column(name="updated_at")
+    private Timestamp updatedAt;
+    @Column(length = 255, name = "created_by")
+    private String createdBy;
+    @Column(length = 255, name="updated_by")
+    private String updatedBy;
+
+    @OneToMany(mappedBy = "storeId")
+    @JsonIgnoreProperties({"storeId"})
+    private List<Order> orderId;
 
 }

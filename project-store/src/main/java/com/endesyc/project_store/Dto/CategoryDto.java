@@ -13,8 +13,8 @@ public class CategoryDto {
     private Integer id;
     private String name;
     private String description;
-    private Timestamp created_at;
-    private Timestamp updated_at;
-    private String created_by;
-    private String updated_by;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
+    private String createdBy;
+    private String updatedBy;
 }

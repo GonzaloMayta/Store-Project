@@ -4,10 +4,15 @@ import com.endesyc.project_store.Entity.Store;
 import com.endesyc.project_store.Mapper.StoreMapper;
 import com.endesyc.project_store.Repository.StoreRepository;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
+@AllArgsConstructor
+@Setter
+@Getter
 @Service
 public class StoreServiceImpl implements StoreService{
 
@@ -33,7 +38,10 @@ public class StoreServiceImpl implements StoreService{
 
     @Override
     public Store updateStore(Integer id,StoreDto dto) {
-        Store store=storeMapper.updateDto(id,dto);
+        Store store=new Store();
+        if(this.getById(id)!=null){
+            store=storeMapper.updateDto(id,dto);
+        }
         return storeRepository.save(store);
     }
 

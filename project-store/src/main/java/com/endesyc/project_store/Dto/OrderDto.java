@@ -18,12 +18,12 @@ public class OrderDto {
     private Integer   id;
     private String    name;
     private Date      date;
-    private String    shipping_address;
-    private Boolean   is_delivery;
-    private Timestamp created_at;
-    private Timestamp updated_at;
-    private  String created_by;
-    private  String updated_by;
-    private Store store_id;
+    private String    shippingAddress;
+    private Boolean   isDelivery;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
+    private  String createdBy;
+    private  String updatedBy;
+    private Store storeId;
 
 }

@@ -14,7 +14,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 @RequestMapping("/store")
 @AllArgsConstructor
@@ -23,13 +22,11 @@ public class StoreController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Store> getById(@PathVariable("id") Integer id){
-        Store  storeFound= storeService.getById(id);
-        return ResponseEntity.ok().body( storeFound);
+        return ResponseEntity.ok().body( storeService.getById(id));
     }
     @PostMapping
     public ResponseEntity < Store> create(@RequestBody StoreDto dto){
-        Store  storeSaved= storeService.create(dto);
-        return ResponseEntity.status(HttpStatus.OK).body( storeSaved);
+        return ResponseEntity.status(HttpStatus.OK).body( storeService.create(dto));
     }
 
 
@@ -43,9 +40,7 @@ public class StoreController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity < Store> updateStore(@PathVariable("id") Integer id,@RequestBody  StoreDto dto){
-        Store  storeFound=storeService.getById(id);
-        Store  storeUpdated=storeService.updateStore(storeFound.getId(),dto);
-        return ResponseEntity.status(HttpStatus.OK).body(storeUpdated);
+        return ResponseEntity.status(HttpStatus.OK).body(storeService.updateStore(id,dto));
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteCategory(@PathVariable("id") Integer id){

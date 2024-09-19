@@ -13,6 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/category")
 @AllArgsConstructor
@@ -21,15 +23,12 @@ public class CategoryController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Category> getById(@PathVariable("id") Integer id){
-        Category categoryFound=categoryService.getById(id);
-        return ResponseEntity.ok().body(categoryFound);
+        return ResponseEntity.ok().body(categoryService.getById(id));
     }
-@PostMapping
-public ResponseEntity <Category> create(@RequestBody CategoryDto dto){
-        Category categorySaved=categoryService.create(dto);
-        return ResponseEntity.status(HttpStatus.OK).body(categorySaved);
-}
-
+    @PostMapping
+    public ResponseEntity <Category> create(@RequestBody CategoryDto dto){
+            return ResponseEntity.status(HttpStatus.OK).body(categoryService.create(dto));
+    }
 
     @GetMapping("/categories_pageable")
     public ResponseEntity<Page<Category>> getProducts(@RequestParam int page, @RequestParam int size){
@@ -41,16 +40,20 @@ public ResponseEntity <Category> create(@RequestBody CategoryDto dto){
 
     @PutMapping("/update/{id}")
     public ResponseEntity <Category> updateCategory(@PathVariable("id") Integer id,@RequestBody CategoryDto dto){
-        Category categoryFound=categoryService.getById(id);
-        Category categoryUpdated=categoryService.updateCategory(categoryFound.getId(),dto);
-        return ResponseEntity.status(HttpStatus.OK).body(categoryUpdated);
-    }
-@DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteCategory(@PathVariable("id") Integer id){
-        categoryService.deleteCategory(id);
-        return ResponseEntity.ok().body("Category is deleted successfully");
+        return ResponseEntity.status(HttpStatus.OK).body(categoryService.updateCategory(id,dto));
     }
 
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteCategory(@PathVariable("id") Integer id){
+        categoryService.deleteCategory(id);
+    return ResponseEntity.ok().body("Category is deleted successfully");
+    }
+
+    /* List all Categories*/
+    @GetMapping("/listcategory")
+    public ResponseEntity<List<Category>> listAllCategory(){
+        return ResponseEntity.ok().body(categoryService.listAllCategory());
+    }
 
 
 }

@@ -25,10 +25,10 @@ public class DetailOrder {
 
     @ManyToOne
     @JoinColumn(name="order_id", nullable = false)
-    private Order order_id;
+    private Order orderId;
 
     @ManyToOne
     @JoinColumn(name="product_id", nullable = false)
-    private Product product_id;
+    private Product productId;
 
 }

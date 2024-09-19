@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Setter
 @Getter
@@ -40,7 +42,10 @@ public class CategoryServiceImpl implements CategoryService{
 
     @Override
     public Category updateCategory(Integer id,CategoryDto dto) {
-        Category category=categoryMapper.updateDto(id,dto);
+        Category category= new Category();
+        if (this.getById(id) !=null){
+             category=categoryMapper.updateDto(id,dto);
+        }
         return categoryRepository.save(category);
     }
 
@@ -50,6 +55,12 @@ public class CategoryServiceImpl implements CategoryService{
     Category categoryFound=categoryRepository.findById(id).orElseThrow(()->new EntityNotFoundException("Not found category"));
     categoryRepository.deleteById(id);
 
+    }
+
+    @Override
+    public List<Category> listAllCategory() {
+        List<Category> listCategory=categoryRepository.findAll();
+        return listCategory;
     }
 
 

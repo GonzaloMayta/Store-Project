@@ -1,6 +1,9 @@
 package com.endesyc.project_store.Entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,6 +11,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 
 @Getter
@@ -29,15 +33,21 @@ public class Product {
     private Double price;
     private Boolean active;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", shape = JsonFormat.Shape.STRING)
-    private Timestamp created_at;
+    @Column(name = "created_at")
+    private Timestamp createdAt;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", shape = JsonFormat.Shape.STRING)
-    private Timestamp updated_at;
-    @Column(length = 255)
-    private String created_by;
-    @Column(length = 255)
-    private String updated_by;
+    @Column(name = "updated_at")
+    private Timestamp updatedAt;
+    @Column(length = 255,name = "created_by")
+    private String createdBy;
+    @Column(length = 255, name = "updated_by")
+    private String updatedBy;
 
     @ManyToOne
-    @JoinColumn(name="category_id", nullable = false)
-    private Category category_id;
+    @JoinColumn(name="category_id")
+    private Category categoryId;
+
+    @OneToMany(mappedBy = "productId")
+    @JsonIgnoreProperties({"productId","detailOrderList","orderId","product"})
+    private List<DetailOrder> detailOrderList;
 }

@@ -10,10 +10,10 @@ public class CategoryMapper {
         Category category= new Category();
         category.setName(dto.getName());
         category.setDescription(dto.getDescription());
-        category.setCreated_at(dto.getCreated_at());
-        category.setUpdated_at(dto.getUpdated_at());
-        category.setCreated_by(dto.getCreated_by());
-        category.setUpdated_by(dto.getUpdated_by());
+        category.setCreatedAt(dto.getCreatedAt());
+        category.setUpdatedAt(dto.getUpdatedAt());
+        category.setCreatedBy(dto.getCreatedBy());
+        category.setUpdatedBy(dto.getUpdatedBy());
 
         return category;
     }
@@ -22,10 +22,10 @@ public class CategoryMapper {
         category.setId(id);
         category.setName(dto.getName());
         category.setDescription(dto.getDescription());
-        category.setCreated_at(dto.getCreated_at());
-        category.setUpdated_at(dto.getUpdated_at());
-        category.setCreated_by(dto.getCreated_by());
-        category.setUpdated_by(dto.getUpdated_by());
+        category.setCreatedAt(dto.getCreatedAt());
+        category.setUpdatedAt(dto.getUpdatedAt());
+        category.setCreatedBy(dto.getCreatedBy());
+        category.setUpdatedBy(dto.getUpdatedBy());
 
         return category;
     }

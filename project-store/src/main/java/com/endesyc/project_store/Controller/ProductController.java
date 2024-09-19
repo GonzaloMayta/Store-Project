@@ -23,13 +23,13 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Product> getById(@PathVariable("id") Integer id){
-        Product  productFound= productService.getById(id);
-        return ResponseEntity.ok().body( productFound);
+
+        return ResponseEntity.ok().body(productService.getById(id));
     }
     @PostMapping
     public ResponseEntity < Product> create(@RequestBody ProductDto dto){
-        Product  productSaved= productService.create(dto);
-        return ResponseEntity.status(HttpStatus.OK).body( productSaved);
+
+        return ResponseEntity.status(HttpStatus.OK).body(productService.create(dto));
     }
 
 
@@ -43,9 +43,8 @@ public class ProductController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity < Product> updateCategory(@PathVariable("id") Integer id,@RequestBody  ProductDto dto){
-        Product  productFound=productService.getById(id);
-        Product  productUpdated=productService.updateProduct(productFound.getId(),dto);
-        return ResponseEntity.status(HttpStatus.OK).body(productUpdated);
+
+        return ResponseEntity.status(HttpStatus.OK).body(productService.updateProduct(id,dto));
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteCategory(@PathVariable("id") Integer id){
@@ -54,7 +53,6 @@ public class ProductController {
     }
     @GetMapping("/findproduct/{name}")
     public ResponseEntity<Product> getById(@PathVariable("name") String name){
-        Product  productFound= productService.getByName(name);
-        return ResponseEntity.ok().body( productFound);
+        return ResponseEntity.ok().body( productService.getByName(name));
     }
 }

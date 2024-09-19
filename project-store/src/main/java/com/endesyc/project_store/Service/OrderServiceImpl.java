@@ -41,7 +41,11 @@ public class OrderServiceImpl implements OrderService{
 
     @Override
     public Order updateOrder(Integer id,OrderDto dto) {
-        Order order=orderMapper.updateDto(id,dto);
+        Order order=new Order();
+
+        if(this.getById(id)!=null){
+            order=orderMapper.updateDto(id,dto);
+        }
         return orderRepository.save(order);
     }
 

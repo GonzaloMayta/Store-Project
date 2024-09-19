@@ -13,7 +13,7 @@ public class DetailOrderDto {
 
     private Integer id;
     private Integer quantity;
-    private Order order_id;
-    private Product product_id;
+    private Order orderId;
+    private Product productId;
 
 }

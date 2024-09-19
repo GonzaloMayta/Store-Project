@@ -12,11 +12,10 @@ public class ProductMapper {
         product.setStock(dto.getStock());
         product.setPrice(dto.getPrice());
         product.setActive(dto.getActive());
-        product.setCreated_at(dto.getCreated_at());
-        product.setUpdated_at(dto.getUpdated_at());
-        product.setCreated_by(dto.getCreated_by());
-        product.setUpdated_by(dto.getUpdated_by());
-
+        product.setCreatedAt(dto.getCreatedAt());
+        product.setUpdatedAt(dto.getUpdatedAt());
+        product.setCreatedBy(dto.getCreatedBy());
+        product.setUpdatedBy(dto.getUpdatedBy());
         return product;
     }
 
@@ -29,10 +28,10 @@ public class ProductMapper {
         product.setStock(dto.getStock());
         product.setPrice(dto.getPrice());
         product.setActive(dto.getActive());
-        product.setCreated_at(dto.getCreated_at());
-        product.setUpdated_at(dto.getUpdated_at());
-        product.setCreated_by(dto.getCreated_by());
-        product.setUpdated_by(dto.getUpdated_by());
+        product.setCreatedAt(dto.getCreatedAt());
+        product.setUpdatedAt(dto.getUpdatedAt());
+        product.setCreatedBy(dto.getCreatedBy());
+        product.setUpdatedBy(dto.getUpdatedBy());
 
         return product;
     }

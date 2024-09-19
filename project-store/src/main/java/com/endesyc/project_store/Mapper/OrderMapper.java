@@ -5,8 +5,6 @@ import com.endesyc.project_store.Entity.Order;
 import com.endesyc.project_store.Entity.Store;
 import org.springframework.stereotype.Component;
 
-import java.sql.Timestamp;
-import java.util.Date;
 
 @Component
 public class OrderMapper {
@@ -15,13 +13,13 @@ public class OrderMapper {
 
         order.setName(dto.getName());
         order.setDate(dto.getDate());
-        order.setShipping_address(dto.getShipping_address());
-        order.setIs_delivery(dto.getIs_delivery());
-        order.setCreated_at(dto.getCreated_at());
-        order.setUpdated_at(dto.getUpdated_at());
-        order.setCreated_by(dto.getCreated_by());
-        order.setUpdated_by(dto.getUpdated_by());
-        order.setStore_id(dto.getStore_id());
+        order.setShippingAddress(dto.getShippingAddress());
+        order.setIsDelivery(dto.getIsDelivery());
+        order.setCreatedAt(dto.getCreatedAt());
+        order.setUpdatedAt(dto.getUpdatedAt());
+        order.setCreatedBy(dto.getCreatedBy());
+        order.setUpdatedBy(dto.getUpdatedBy());
+        order.setStoreId(dto.getStoreId());
       return order;
 
     }
@@ -31,14 +29,13 @@ public class OrderMapper {
         order.setId(id);
         order.setName(dto.getName());
         order.setDate(dto.getDate());
-        order.setShipping_address(dto.getShipping_address());
-        order.setIs_delivery(dto.getIs_delivery());
-        order.setCreated_at(dto.getCreated_at());
-        order.setUpdated_at(dto.getUpdated_at());
-        order.setCreated_by(dto.getCreated_by());
-        order.setUpdated_by(dto.getUpdated_by());
-        order.setStore_id(dto.getStore_id());
-
+        order.setShippingAddress(dto.getShippingAddress());
+        order.setIsDelivery(dto.getIsDelivery());
+        order.setCreatedAt(dto.getCreatedAt());
+        order.setUpdatedAt(dto.getUpdatedAt());
+        order.setCreatedBy(dto.getCreatedBy());
+        order.setUpdatedBy(dto.getUpdatedBy());
+        order.setStoreId(dto.getStoreId());
         return order;
     }
 }

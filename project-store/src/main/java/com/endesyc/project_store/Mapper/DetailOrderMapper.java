@@ -10,8 +10,8 @@ public class DetailOrderMapper {
     public DetailOrder fromDto(DetailOrderDto dto){
         DetailOrder detailOrder = new DetailOrder();
         detailOrder.setQuantity(dto.getQuantity());
-        detailOrder.setOrder_id(dto.getOrder_id());
-        detailOrder.setProduct_id(dto.getProduct_id());
+        detailOrder.setOrderId(dto.getOrderId());
+        detailOrder.setProductId(dto.getProductId());
 
         return detailOrder;
     }
@@ -20,8 +20,8 @@ public class DetailOrderMapper {
         DetailOrder detailOrder = new DetailOrder();
         detailOrder.setId(id);
         detailOrder.setQuantity(dto.getQuantity());
-        detailOrder.setOrder_id(dto.getOrder_id());
-        detailOrder.setProduct_id(dto.getProduct_id());
+        detailOrder.setOrderId(dto.getOrderId());
+        detailOrder.setProductId(dto.getProductId());
 
         return detailOrder;
     }

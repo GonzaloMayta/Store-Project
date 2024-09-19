@@ -12,14 +12,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-
-
 @AllArgsConstructor
 @Setter
 @Getter
 @Service
 public class DetailOrderServiceImpl implements DetailOrderService{
-
 
     private DetailOrderRepository detailOrderRepository;
 
@@ -42,7 +39,10 @@ public class DetailOrderServiceImpl implements DetailOrderService{
 
     @Override
     public DetailOrder updateDetail(Integer id, DetailOrderDto dto) {
-        DetailOrder detail=detailOrderMapper.updateDto(id,dto);
+        DetailOrder detail=new DetailOrder();
+        if(this.getById(id)!=null){
+            detail=detailOrderMapper.updateDto(id,dto);
+        }
         return detailOrderRepository.save(detail);
     }
 

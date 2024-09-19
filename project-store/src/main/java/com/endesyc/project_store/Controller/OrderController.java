@@ -22,13 +22,12 @@ public class OrderController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Order> getById(@PathVariable("id") Integer id){
-        Order orderFound=orderService.getById(id);
-        return ResponseEntity.ok().body(orderFound);
+        return ResponseEntity.ok().body(orderService.getById(id));
     }
+
     @PostMapping
     public ResponseEntity <Order> create(@RequestBody OrderDto dto){
-        Order orderSaved=orderService.create(dto);
-        return ResponseEntity.status(HttpStatus.OK).body(orderSaved);
+        return ResponseEntity.status(HttpStatus.OK).body(orderService.create(dto));
     }
 
 
@@ -42,9 +41,7 @@ public class OrderController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity <Order> updateOrder(@PathVariable("id") Integer id,@RequestBody OrderDto dto){
-        Order orderFound=orderService.getById(id);
-        Order OrderUpdated=orderService.updateOrder(orderFound.getId(),dto);
-        return ResponseEntity.status(HttpStatus.OK).body(OrderUpdated);
+        return ResponseEntity.status(HttpStatus.OK).body(orderService.updateOrder(id,dto));
     }
     
     @DeleteMapping("/delete/{id}")

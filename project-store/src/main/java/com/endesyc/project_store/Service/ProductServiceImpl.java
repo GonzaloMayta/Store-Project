@@ -41,17 +41,19 @@ public class ProductServiceImpl implements ProductService{
 
     @Override
     public Product updateProduct(Integer id, ProductDto dto) {
-        Product product=productMapper.updateDto(id,dto);
+        Product product=new Product();
+        if(this.getById(id)!=null) {
+            product = productMapper.updateDto(id, dto);
+        }
         return productRepository.save(product);
     }
 
     @Override
     public void deleteProduct(Integer id) {
-
         Product productFound= productRepository.findById(id).orElseThrow(()->new EntityNotFoundException("Not found Product"));
         productRepository.deleteById(id);
-
     }
+
 
     @Override
     public Product getByName(String name) {

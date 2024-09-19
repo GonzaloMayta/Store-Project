@@ -11,11 +11,11 @@ public class StoreMapper {
         store.setName(dto.getName());
         store.setAddress(dto.getAddress());
         store.setCity(dto.getCity());
-        store.setOpening_hours(dto.getOpening_hours());
-        store.setCreated_at(dto.getCreated_at());
-        store.setUpdated_at(dto.getUpdated_at());
-        store.setCreated_by(dto.getCreated_by());
-        store.setUpdated_by(dto.getUpdated_by());
+        store.setOpeningHours(dto.getOpeningHours());
+        store.setCreatedAt(dto.getCreatedAt());
+        store.setUpdatedAt(dto.getUpdatedAt());
+        store.setCreatedBy(dto.getCreatedBy());
+        store.setUpdatedBy(dto.getUpdatedBy());
 
         return store;
     }
@@ -27,11 +27,11 @@ public class StoreMapper {
         store.setName(dto.getName());
         store.setAddress(dto.getAddress());
         store.setCity(dto.getCity());
-        store.setOpening_hours(dto.getOpening_hours());
-        store.setCreated_at(dto.getCreated_at());
-        store.setUpdated_at(dto.getUpdated_at());
-        store.setCreated_by(dto.getCreated_by());
-        store.setUpdated_by(dto.getUpdated_by());
+        store.setOpeningHours(dto.getOpeningHours());
+        store.setCreatedAt(dto.getCreatedAt());
+        store.setUpdatedAt(dto.getUpdatedAt());
+        store.setCreatedBy(dto.getCreatedBy());
+        store.setUpdatedBy(dto.getUpdatedBy());
 
         return store;
     }

@@ -1,6 +1,7 @@
 package com.endesyc.project_store.Entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +10,7 @@ import lombok.Setter;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,20 +26,27 @@ public class Order {
     @Column(length = 255)
     private  String name;
     private Date date;
-    @Column(length = 255)
-    private  String shipping_address;
-    private  Boolean is_delivery;
+    @Column(length = 255,name = "shipping_address")
+    private  String shippingAddress;
+    @Column(name="is_delivery")
+    private  Boolean isDelivery;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", shape = JsonFormat.Shape.STRING)
-    private Timestamp created_at;
+    @Column(name="created_at")
+    private Timestamp createdAt;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", shape = JsonFormat.Shape.STRING)
-    private   Timestamp updated_at;
-    @Column(length = 255)
-    private  String created_by;
-    @Column(length = 255)
-    private  String updated_by;
+    @Column(name="updated_at")
+    private   Timestamp updatedAt;
+    @Column(length = 255, name="created_by")
+    private  String createdBy;
+    @Column(length = 255, name ="updated_by")
+    private  String updatedBy;
 
     @ManyToOne
-    @JoinColumn(name="stored_id")
-    private Store store_id;
+    @JoinColumn(name="stored_id",nullable = false)
+    private Store storeId;
+
+    @OneToMany(mappedBy = "orderId")
+    @JsonIgnoreProperties({"orderId","detailOrderList","storeId","categoryId", "storeId"})
+    private List<DetailOrder> detailOrderList;
 
 }

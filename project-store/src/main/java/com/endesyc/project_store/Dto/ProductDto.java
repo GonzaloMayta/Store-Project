@@ -3,6 +3,7 @@ package com.endesyc.project_store.Dto;
 
 import com.endesyc.project_store.Entity.Category;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -23,9 +24,10 @@ public class ProductDto {
     private Integer stock;
     private Double price;
     private Boolean active;
-    private Timestamp created_at;
-    private Timestamp updated_at;
-    private String created_by;
-    private String updated_by;
-    private Category category_id;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
+    private String createdBy;
+    private String updatedBy;
+    private Category categoryId;
+
 }
