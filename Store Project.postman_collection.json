@@ -1,0 +1,746 @@
+{
+	"info": {
+		"_postman_id": "d840d8ce-8a58-4e47-b5e2-346b28ee70e7",
+		"name": "Store Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13720736"
+	},
+	"item": [
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Search by Id Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/category/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"category",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show category on pageable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/category/categories_pageable?page=0&size=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"category",
+								"categories_pageable"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n \r\n\"name\":\"PRUEBA\",\r\n\"description\":\"Implementos creacion registro\",\r\n\"createdAt\":\"2022-12-31T15:53:16\", \r\n\"updatedAt\":\"2022-12-31T15:53:16\", \r\n\"createdBy\":\"ADMIN4\",\r\n\"updatedBy\":\"Seller 6\"\r\n}\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/category",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update category by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 13,\r\n    \"name\": \"updated now\",\r\n    \"description\": \"Implementos creacion registro\",\r\n    \"createdAt\": \"2022-12-31T15:53:16\",\r\n    \"updatedAt\": \"2022-12-31T15:53:16\",\r\n    \"createdBy\": \"ADMIN5\",\r\n    \"updatedBy\": \"Seller 6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/category/update/15",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"category",
+								"update",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/category/delete/13",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"category",
+								"delete",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/category/listcategory",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"category",
+								"listcategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Strore",
+			"item": [
+				{
+					"name": "Search by Id Store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/store/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"store",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Store on pageable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/store/store_pageable?page=0&size=30",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"store",
+								"store_pageable"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Inserted\",\r\n    \"address\": \"Calle 5 nr 20\",\r\n    \"city\": \"La Paz\",\r\n    \"openingHours\": \"09:00 am to 20:00 pm\",\r\n    \"createdAt\": \"2024-05-01T19:38:57\",\r\n    \"updatedAt\": \"2024-09-15T19:38:57\",\r\n    \"createdBy\": \"Admin 1\",\r\n    \"updatedBy\": \"Operator 4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/store",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Store by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 21,\r\n    \"name\": \"Updated\",\r\n    \"address\": \"Calle 5 nr 20\",\r\n    \"city\": \"La Paz\",\r\n    \"openingHours\": \"09:00 am to 20:00 pm\",\r\n    \"createdAt\": \"2024-05-01T19:38:57\",\r\n    \"updatedAt\": \"2024-09-15T19:38:57\",\r\n    \"createdBy\": \"Admin 1\",\r\n    \"updatedBy\": \"Operator 4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/store/update/23",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"store",
+								"update",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Store by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/store/delete/24",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"store",
+								"delete",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Search by Id Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/product/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Product on pageable",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/product/product_pageable?page=0&size=30",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"product",
+								"product_pageable"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"teclado inalambrico\",\r\n    \"description\": \"teclados gamers\",\r\n    \"stock\": 20,\r\n    \"price\": 400.0,\r\n    \"active\": true,\r\n    \"createdAt\": \"2024-05-01T19:38:57\",\r\n    \"updatedAt\": \"2024-05-01T19:38:57\",\r\n    \"createdBy\": \"Admin 01\",\r\n    \"updatedBy\": \"Admin 02\",\r\n    \"categoryId\": { \"id\": 7 }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"teclado Gonza\",\r\n    \"description\": \"teclados gamers\",\r\n    \"stock\": 20,\r\n    \"price\": 400.0,\r\n    \"active\": true,\r\n    \"createdAt\": \"2024-05-01T19:38:57\",\r\n    \"updatedAt\": \"2024-05-01T19:38:57\",\r\n    \"createdBy\": \"Admin 01\",\r\n    \"updatedBy\": \"Admin 02\",\r\n    \"categoryId\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/product/update/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"product",
+								"update",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/product/delete/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"product",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/product/findproduct/Guantes de moto",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"product",
+								"findproduct",
+								"Guantes de moto"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Find order by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/order/findorder/Order4",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"findorder",
+								"Order4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by Id Order",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/order/40",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"40"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Order on pageable Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/order/orders_pageable?page=0&size=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"orders_pageable"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n\r\n{\r\n    \"name\": \"Order51\",\r\n    \"date\": \"2024-09-18T04:00:00.000+00:00\",\r\n    \"shippingAddress\": \"El Alto Beni\",\r\n    \"isDelivery\": true,\r\n    \"createdAt\": \"2024-05-01T19:38:57\",\r\n    \"updatedAt\": \"2024-05-01T19:38:57\",\r\n    \"createdBy\": \"Admin2\",\r\n    \"updatedBy\": \"BigBoos\",\r\n    \"storeId\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order by id Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"name\": \"UpdateOrder\",\r\n    \"date\": \"2024-09-18T04:00:00.000+00:00\",\r\n    \"shippingAddress\": \"El Alto Beni\",\r\n    \"isDelivery\": true,\r\n    \"createdAt\": \"2024-05-01T19:38:57\",\r\n    \"updatedAt\": \"2024-05-01T19:38:57\",\r\n    \"createdBy\": \"Admin2\",\r\n    \"updatedBy\": \"BigBoos\",\r\n    \"storeId\": {\r\n        \"id\": 2\r\n          }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/order/update/39",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"update",
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order by id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/order/delete/39",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"order",
+								"delete",
+								"39"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DetailsOrder",
+			"item": [
+				{
+					"name": "Find Details by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/details/38",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"details",
+								"38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 100,\r\n    \"orderId\": {\r\n        \"id\": 4\r\n    },\r\n    \"productId\": {\r\n        \"id\": 2\r\n       \r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/details",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Details on pageable Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/details/details_pageable?page=0&size=3",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"details",
+								"details_pageable"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Details by id Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 39,\r\n    \"quantity\": 500,\r\n    \"orderId\": {\r\n        \"id\": 4\r\n    },\r\n    \"productId\": {\r\n        \"id\": 2\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8085/details/update/39",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"details",
+								"update",
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Details by id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/details/delete/39",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"details",
+								"delete",
+								"39"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
